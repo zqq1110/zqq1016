@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="box" class="box">1-->
+    <!--<div id="center" class="bpx"></div>-->
+<!--</div>-->
+<!--<div class="box"></div>-->
+<!--<input type="text" name="box">-->
+<!--<input type="text" name="a">-->
+<div id="a" class="b">1</div>
+<div id="c" class="b">2</div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    // 1. id获取  id是唯一的； 如果id重复，那么获取第一个元素；
+    // 只有document才可以调用getElementById;
+    // 在IE8 以下，浏览器会默认把input框的name当做id来获取；
+    //    var oBox = document.getElementById("box");
+    //    console.log(oBox);
+    //console.log(oBox.getElementById("center"));// 报错
+    //    console.log(oBox);
+    //console.log(typeof oBox);// "object";
+    // oBox.className = "div1";
+    //元素对象
+    //    console.log(box);
+
+    // 2.class  document.getElementsByClassName("")
+    // 在IE8 及以下不兼容，没有这个方法
+    //    var  a = document.getElementsByClassName("box")[0];
+    //    console.log(a.getElementsByClassName("bpx"));
+    //    console.log(a);
+    //    a.style.background = "red"
+
+    // 3. document.getElementsByTagName() : 通过标签名来获取元素
+    // 上下问=文可以是元素对象；
+    //    var  b = document.getElementsByClassName("box")[0];
+//    var a = document.getElementsByTagName("div")[0];
+//    console.log(a);
+    // 4.getElementsByName(): 一般用于表单元素；
+//    console.log(document.getElementsByName("a"));
+    // 5: document.documentElement : 获取html;
+    //console.log(document.documentElement);
+    // 获取当前浏览器可视窗口的宽度
+//    console.log(document.documentElement.clientWidth);
+//    console.log(document.documentElement.clientHeight);
+
+    // 6.document.body : 获取页面的body；
+//    console.log(document.body);
+//    console.log(document.getElementsByTagName("body")[0]);
+
+
+    // 7.querySelector： 获取第一个  id用#修饰  class用；
+    console.log(document.querySelector(".b"));
+
+
+    // 8.querySelectorAll : 获取所有的
+    console.log(document.querySelectorAll(".b"));
+
+
+</script>
+</body>
+</html>

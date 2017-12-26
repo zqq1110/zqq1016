@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="outer">
+    <div></div>
+    <div></div>
+    <div id="center"></div>
+</div>
+<script>
+    // 动态操作DOM
+    // 1.document.createElement;创建元素对象
+    var  outer = document.getElementById("outer");
+    var a = document.createElement("ul")
+     var  center = document.getElementById("center")
+    // 2. appendChild : 向容器的末尾添加一个元素；
+//    document.body.appendChild(a);
+
+    // 3.insertBefore : 向容器中某一个元素的前面添加元素
+//     outer.insertBefore(a,center)
+     // 4.removeChild : 删除子节点
+
+//      outer.removeChild(center)
+
+    // 5. replaceChild : 替换子节点
+//    outer.replaceChild(a,center)
+
+    // 6.cloneNode  克隆
+    // true : 深克隆
+    // false : 浅克隆，默认是浅克隆；
+//    console.log(outer.cloneNode(true));
+
+    // 7.get/set/ remove Attribute : 获取、设置、删除自定义属性
+    outer.setAttribute("data-time","2017/12/23");// 设置
+    outer.getAttribute("data-time");
+    outer.removeAttribute("data-time");
+
+
+
+</script>
+</body>
+</html>

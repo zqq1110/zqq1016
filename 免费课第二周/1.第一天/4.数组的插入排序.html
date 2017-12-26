@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [12,66,33,8,55,9,90,99,68];
+    var newAry = [];
+    newAry.push(ary[0]);
+    for(var i=1;i<ary.length;i++){
+        // 获取当前最新在数组取到的值；
+        var cur = ary[i];
+        for(var j = newAry.length-1;j>=0;){
+            if(cur < newAry[j]){
+                // 如果在数组中取到的值A比当前新数组当前项B小，那么继续让数组中取到的A 继续和新数组中B这一项的前一项进行比较；
+                j--;
+                if(j===-1){
+                    // 如果比新数组中第一项还小，直接把这一项放到新数组的开头
+                   newAry.unshift(cur);
+                }
+            }else{
+                // 如果遇到A大于数组B项，直接让其添加到新数组B项的后面；
+                newAry.splice(j+1,0,cur);
+                break;
+            }
+        }
+    }
+    console.log(newAry);
+
+
+</script>
+</body>
+</html>

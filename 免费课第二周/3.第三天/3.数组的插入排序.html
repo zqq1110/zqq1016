@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [12,8,90,68,86,56,77,66];
+
+    var newAry = [];
+    newAry.push(ary[0]);
+    // 循环是原有数组中每一项
+    for(var i=1;i<ary.length;i++){
+        // 去获取原有数组中的值
+        var  cur = ary[i];// 8  90
+        for(var j =0;j<newAry.length;){// [12]  [8,12,90]
+            // 循环新数组中的每一项；
+            if(cur<newAry[j]){
+                newAry.splice(j,0,cur);
+                break;
+            }else{
+                j++;
+                if(j===newAry.length){
+                    newAry.push(cur);
+                    break;
+                }
+            }
+        }
+    }
+    console.log(newAry);
+
+
+</script>
+</body>
+</html>

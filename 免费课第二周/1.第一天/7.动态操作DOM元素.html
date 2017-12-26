@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <div id="first"></div>
+    <div id="second"></div>
+    <div id="third"></div>
+</div>
+<script>
+    var oBox = document.getElementById("box");
+    var thi = document.getElementById("third");
+    // 1. 动态操作DOM元素
+    // 1. createElement : 创建一个元素
+//    var a = document.createElement("div");
+
+    // 2.appendChild : 向元素容器的末尾添加一个元素
+//    oBox.appendChild(a)
+//    a.innerHTML = "<h2>你很帅</h2>";
+    // innerHTML  和innerText区别
+    // innerHTML 可以识别标签，innerText 不识别标签；
+//    oBox.innerHTML += "我很帅";
+
+  // 3.inertBefore : 向容器中某一个元素的前面新增一个元素
+//    oBox.insertBefore(a,thi);
+    // 容器.insertBefore(newChild,oldChild)
+    // 4.removeChild : 删除子节点,参数是要删除的那一个节点
+    //oBox.removeChild(thi);
+
+    // 5.replaceChild   替换
+    // 容器.replaceChild(newChild,oldChild)
+//    oBox.replaceChild(a,thi)
+
+    // 6.cloneNode : 参数 true  深克隆（会把当前元素的所有子节点也克隆）   false : 浅克隆（只克隆自己本身）不传参数，默认是false;
+
+//    console.log(oBox.cloneNode(true));
+    // 7.getAttribute  setAttribute  removeAttribute
+    // 获取  设置   移除   自定义属性
+    thi.setAttribute("data",1);
+//    console.log(thi.getAttribute("data"));
+    thi.removeAttribute("data");
+
+</script>
+</body>
+</html>

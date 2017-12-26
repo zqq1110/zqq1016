@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 对象类型-对象；
+    // 键值对用逗号，属性名和属性值用冒号隔开；
+    var a = 10;
+    var obj = {name: "", id: "", class: "", a: a};
+    console.log(obj);
+    var ary = [];
+    var bry = [];
+    ary = [10]
+    // 在js中，遇到{}、[]都会重新开辟一个新的空间地址；
+    // 对象的定义
+    // 1. 首先开辟一个堆内存，堆内存对应一个空间地址；
+    // 2. 会把对象中的键值对放进堆内存中
+    // 3. 把这个空间地址赋值给变量；
+
+    //    var  a = b = {};
+    //    b.age = 10;
+    //    console.log(a);
+    //    var c = d = 100;
+    //    d =200;
+    //    console.log(c);// 100;
+    var obj = {name: "", id: 18, id: 20, class: "", a: 12, 88: 88};
+    console.log(obj[0]);//undefined
+    console.log(obj);
+    // 1. 获取属性名对应属性值  对象.属性名
+    //console.log(obj.88);
+    //  obj["属性名"]
+
+    //console.log(obj["id"]);
+
+    // 2.修改属性值
+    //    obj.id = 100;
+    //    obj["id"] =100;
+
+    // 3.新增 键值对
+
+    //    obj.fn = "hello";
+    //    obj['fn'] = "hello";
+    // 有就是修改，没有就是新增；
+
+    // 4.delete 删除键值对
+    //    delete obj.a;
+    //    delete obj["a"];
+
+
+</script>
+</body>
+</html>

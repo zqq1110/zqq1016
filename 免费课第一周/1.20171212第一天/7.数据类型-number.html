@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数字number
+    // 正数  负数 小数 0  NaN
+    var num = 10;
+    // typeof  : 检测数据类型的方法；返回值是一个字符串
+    // typeof + 要检测的值
+    //    console.log(typeof num);// "number"
+    // NaN  : not a  number : 但是属于number类型的
+    //    var a = 10.5655;
+    // isNaN : 如果是有效数字返回false，不是有效数字返回true；
+    //    console.log(isNaN("12"));
+    //    var  num = "12";
+    //    Number("12")// 12 Number("12px")// NaN;
+    // Number : 把其他数据类型的强制转换成number类型的;isNaN 在检测是否是有效数字时，先调用Number方法，把后面的值转换成number的类型的；然后进行判断；
+    //    console.log(Number("px12"));// NaN
+    //console.log(Number("12.5"));//12.5
+
+    // parseInt  : 把其他数据类型的值转换成number类型,不能识别小数点；从左到右依次进行查找，直到遇到一个非有效数字停止，把前面内容返回
+
+    //    console.log(parseInt("12.99995px"));// 12
+    //    console.log(parseInt("12px8.5px"));// 12
+
+    //    console.log(Number([]));// 0
+    //    console.log(parseInt([]));// NaN
+
+    // parseFloat:和parseInt 一样，不同的是可以识别小数点；
+    //    console.log(parseFloat("12.99999px"));//12.99999
+    //    console.log(parseFloat("px12.99999px"));// NaN
+
+    // toFixed : 保留小数点的位数方法，返回值是一个字符串；
+    var num = 19.567;
+    console.log(num.toFixed(1));
+    var str = "19.567";
+    console.log(str.toFixed(2));//str.toFixed is not a function ;
+    // str.toFixed  : 不是一个方法；
+
+</script>
+</body>
+</html>

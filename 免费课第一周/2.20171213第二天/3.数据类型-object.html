@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //每个键值对用逗号隔开，属性名和属性值用冒号连接；
+    // js中遇到{} 或者[] 都会开辟一个新的空间地址；
+//    var obj = {a:1,b:2};// xxxfff000
+//    console.log(obj);
+    // 定义对象 ：
+    // 1.开辟一个新的空间地址；
+    // 2.把对象中的属性名属性值存储到当前这个堆内存；
+    // 3.把这个空间地址赋值给变量obj；
+    //    var num=10;
+    //    var obj = xxxfff000;
+
+//    var  obj = {name:"zhufeng",2:100,1:8};
+    // 1.获取属性名对应的属性值  对象.属性名
+    //不能获取属性名是数字对应的属性值；
+//    console.log(obj.name);// "zhufeng";
+//    // 对象["属性名"]
+//    console.log(obj["1"]);
+//    console.log(obj.age);// undefined
+
+    // 2.新增键值对
+//    obj.age = 9;
+//    console.log(obj);
+//    obj["age"] = 9
+//    console.log(obj);
+
+    // 3.修改
+    // 有就是修改，没有就是新增；
+//    obj.name = "培训";
+//    console.log(obj);
+
+    // 4.删除
+//    delete obj.name;
+//    console.log(obj);
+
+    // 对象的增 删 改 查；
+
+    // 创建对象
+    // 字面量方式创建
+//    var obj = {abc:{name:"hello"}};
+//    console.log(obj.abc.name);
+//    var a = {};
+//    obj.name = "12"
+//    a == obj // false
+
+    // 实例创建对象
+    var obj = new Object();
+    obj.name = "12"
+    console.log(obj);
+
+
+</script>
+</body>
+</html>

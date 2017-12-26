@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a = [12,35,8,89,96,44,66,88,100];
+    function quickSort(ary) {
+        // 向下取整
+        if(ary.length<=1){
+            return ary;
+        }
+        // 获取中间项索引
+        var index = Math.floor(ary.length/2);
+        var middleVal = ary.splice(index,1)[0];
+        var left = [];
+        var right = [];
+        for(var i=0;i<ary.length;i++){
+            var  cur = ary[i];
+            if(cur<middleVal){
+                left.push(cur);
+            }else{
+                right.push(cur);
+            }
+        };
+        return quickSort(left).concat(middleVal,quickSort(right))
+    }
+    console.log(quickSort(a));
+
+    // sort
+    // Array.prototype.sort = function(){}
+
+
+
+</script>
+</body>
+</html>

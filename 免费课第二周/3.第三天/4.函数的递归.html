@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 函数的递归 : 在函数体内部执行函数自己；
+    // 递归需要停止条件；
+    // 定义一个函数
+//    function fn(ary) {
+//
+//        console.log(ary);
+//        fn()
+//
+//    };
+//    fn();
+
+    // 递归应用  求1-100之是3倍数并且是5倍数的和
+//    var total = null;
+//    for(var i=0;i<101;i++){
+//        if(i%3===0&&i%5===0){
+//            total +=i;
+//        }
+//    };
+//    console.log(total);
+
+    function sum(num) {
+        if(num ===0){
+            return num;
+            // 函数return后面有内容，那么函数值就是return后面的内容，如果有return，后面没有跟内容，那么函数默认返回值是undefined；如果没有return，也是undefined；
+        }
+        if(num%3===0&&num%5===0){
+           return num + sum(num-1)
+        }else{
+           return sum(num-1);
+        }
+        // return sum(99)
+        // return sum(98)
+        //... 90  + sum(89)
+        // 90 + sum(88)
+        // 90 + 75 + 60 + 45 + 30 + 15 + undefined
+    }
+    console.log(sum(100));
+
+</script>
+</body>
+</html>

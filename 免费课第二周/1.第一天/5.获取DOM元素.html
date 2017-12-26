@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1" class="box" name="first">
+    <div class="div1"  name="div2"></div>
+    <div class="div1" name="div2"></div>
+    <div class="div1"></div>
+    <div class="div1"></div>
+    <p></p>
+</div>
+<!--<input type="text" name="box">-->
+<script>
+    // 1. 通过id获取页面中一个的元素；
+    // id 是唯一的，在一个页面中只能出现一次；
+    // getElementById 的上下文必须document；
+    // 在IE8以下，通过id获取元素，会把input框name属性也叫这个id名字的input框获取到；
+
+//    var obox = document.getElementById("box");
+//    console.log(obox);
+    //    var  div1 = obox.getElementById("div1");// 报错
+//    console.log(div1);
+//    console.log(typeof obox);//"object"
+    // 2.getElementsByClassName()  是一个类数组集合通过class名字去获取元素
+    // 获取不到，获取时[];
+    // 上下文是document或者是具体的元素；
+    // 兼容： 在iE8及以下，不能使用该方法，不兼容；
+//    var divs = obox.getElementsByClassName("div1")[0];// undefined
+//    console.log(divs);
+    // 3. getElementsByTagName : 通过标签名获取元素
+//    var divs = obox.getElementsByTagName("div")
+//    console.log(divs);
+
+    // 4.通过name属性去获取 ; 一般用于获取表单元素；
+    // 上下文是document
+
+//    var a = document.getElementsByName("first")[0];
+//    var b =a.getElementsByName("div2")
+//    console.log(b);
+
+    // 5.document.documentElement;// 获取整个html文档
+//    console.log(document.documentElement)
+    // 6.document.body;// 获取body 标签
+
+    // 7.querySelector : 一般用于移动端；获取一个，如果有多个，只获取第一个
+//    $("#div1")
+//    var div1 =document.querySelector(".div1");
+//    console.log(div1);
+
+    // 8.querySelectorAll : 获取多个；
+    var div1 =document.querySelectorAll(".div1");
+    console.log(div1);
+
+
+</script>
+</body>
+</html>

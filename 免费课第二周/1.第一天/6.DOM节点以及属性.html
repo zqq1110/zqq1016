@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent">
+    <div id="brother">你好
+        <div></div>
+    </div>
+    <!--你好我很好你更好-->
+    咱们十五期同学很棒！
+    <div id="center"></div>
+    <div id="outer"></div>
+    <!--你好我很好你更好-->
+</div>
+
+<script>
+    // DOM节点
+    // 元素节点
+    var center = document.getElementById("center");
+    var parent = document.getElementById("parent")
+    // 所有的换行和空格都是文本节点；
+
+    // DOM节点类型
+    //
+    //             nodeType      nodeName        nodeValue
+    // 元素节点         1           大写的标签名       null;
+    // 文本节点         3            #text           文本内容
+    // 注释节点         8            #comment        注释内容
+    // document        9           #document        null
+
+    // DOM的属性
+    // 1.childNodes : 获取元素所有的子节点
+    // 2.children : 获取当前元素的所有子元素节点
+    // 3.parentNode : 当前元素的父亲节点；
+    //    console.log(document.body.parentNode);
+    //    console.log(document.documentElement.parentNode);// #document
+    // 4.previousSibling : 当前元素的哥哥节点；
+    // previousElementSibling : 哥哥的元素节点；在IE8及以下不兼容
+//    console.log(center.previousElementSibling);
+
+    // 5. nextSibling  : 元素的弟弟节点
+    // nextElementSibling : 弟弟的元素节点；在IE8及以下不兼容
+    // 6.firstChild : 第一个子节点
+    // firstElementChild  :第一个子元素节点，在IE8及以下不兼容
+    // 7.lastChild  : 最后一个子节点
+    // lastElementChild  : 最后一个子元素节点，在IE8及以下不兼容
+
+
+    // 获取当前元素的上一个哥哥的元素节点；
+    // curEle
+    var outer = document.getElementById("outer");
+    function getBrother(curEle) {
+//        console.log(curEle);// center
+        var pre = curEle.previousSibling;
+        while(pre){
+            if(pre.nodeType===1){
+                return pre;
+            }
+            pre = pre.previousSibling;
+        }
+
+    }
+    console.log(getBrother(center));
+
+
+</script>
+</body>
+</html>

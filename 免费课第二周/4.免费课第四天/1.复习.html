@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="outer">
+    <div class="first">1
+        <div class="first"></div>
+    </div>
+</div>
+<div class="first">2</div>
+    <!---->
+<div id="second"></div>
+<script>
+    // 数组
+    var ary = [12,88,99,19]
+    var sec = document.getElementById("second");
+    // 1. 冒泡排序
+    // 2. 插入排序
+    // 3. 快速排序
+
+    // 获取页面中的元素
+
+    // querySelector
+    // 空格，获取outer里面所有的class 叫first的元素
+    // >   #outer>.first   获取outer的子元素中class 叫first的元素
+    console.log(document.querySelectorAll("#outer .first"));
+
+
+    // DOM 节点
+    //           nodeType      nodeName          nodeValue
+    // 元素节点     1          大写的标签名         null
+    // 文本节点     3             #text            文本内容
+    // 注释节点     8             #comment          注释内容
+    // document    9             #document         null；
+
+
+
+    // 1. childNodes   :
+    // 2. children
+    //3.   parentNode : 如果父亲节点不存在，结果是null；
+
+    // 4. previousSibling / previousElementSibling
+    // 5. nextSibling   /nextElementSibling
+    // 6.firstChild   /firstElementChild
+    // 7. lastChild  /lastElementChild
+
+    // 获取上一个哥哥元素节点兼容
+
+    function getBrother(curEle) {
+        console.log("previousElementSibling" in  curEle)
+        if("previousElementSibling" in  curEle){
+            // 执行此行代码，说明是标准浏览器；
+            return curEle.previousElementSibling;
+        }
+        var pre = curEle.previousSibling;
+        while(pre){
+            if(pre.nodeType===1){
+                return pre;
+            }
+            pre = pre.previousSibling;
+        }
+    };
+    getBrother(sec)
+    // in  : 判断当前属性名是否在这个对象中存在，存在返回true，不存在返回false；
+//    var obj = {a:1,b:2};
+//    console.log("c" in obj);
+
+    // DOM 的动态操作
+    // 1. document.createElement
+    // 2. appendChild
+    // 3.insertBefore
+    // 4.removeChild
+    // 5.replaceChild
+    // 6.cloneNode
+    // 7.set/get/remove   Attribute
+
+    // Math
+    // 1. Math.abs  Math.ceil  Math.floor  Math.round  Math.random()  Math.round(Math.random()*(n-m)+m)  Math.sqrt
+    //Math.pow  Math.max  Math.min
+
+
+
+
+
+</script>
+</body>
+</html>

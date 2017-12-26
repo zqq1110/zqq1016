@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a  = document.getElementById("box");
+    console.log(a);
+    var  str = "zhufeng";
+    console.log(str[9]);
+    var num =0;
+    var num =null;
+    // null 和 undefined都表示没有；
+
+    // null :
+    // 1.通过id获取元素，如果没有获取到就是null；
+    // 2.正则进行捕获，没有捕获到内容结果是null；
+    // 3.给对象清空内存，赋值是null；
+
+    // undefined
+    // 1.获取对象属性名对应属性值，如果属性名不存在，那么获取结果是undefined
+    // 2.如果函数有形参，形参没有赋值，那么默认存储是undefined
+    // 3.如果函数没有return，那么函数默认返回值是undefined；
+    var  obj = {name:"珠峰"};
+    console.log(obj.age);// undefined
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [12,8,99,66,88,58,36,64,100];
+    // 快速排序的原理： 首先找到原数组中的中间项（如果数组有偶数个成员，中间项有两个，任意取一个）；让原数组中的每一项和这个几点比较，比这个几点小的放在左边的数组中，比这个基点大的放进数组的右边；直到当前数组中只有一项时，不用再进行比较；
+    function quickSort(ary) {
+        //递归的中止条件
+        if(ary.length<1){
+            return ary;
+        }
+        // 获取中间项的索引
+        var  middleIndex = Math.floor(ary.length/2);
+        // 删除数组中中间项，并且获取中间项的值
+        var  a = ary.splice(middleIndex,1)[0];
+        // left 放入比这个中间项小的值
+        var  left  =[];
+        var  right = [];
+        for(var i=0;i<ary.length;i++){
+            var cur = ary[i];
+            if(cur<a){
+                left.push(cur);
+            }else{
+                right.push(cur)
+            }
+        }
+        // 通过递归对每一次比较之后的数组进行拼接
+        return quickSort(left).concat(a,quickSort(right))
+    };
+    console.log(quickSort(ary));
+
+
+</script>
+</body>
+</html>

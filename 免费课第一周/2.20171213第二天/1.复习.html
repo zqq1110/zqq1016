@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="first"></div>
+<div></div>
+<div></div>
+<script>
+    // js组成  ：
+    // ECMAScript
+    // DOM : document object model 提供js操作页面中元素的一些属性和方法
+    // BOM : browser  object model  提供js操作浏览器一些属性和方法
+    //    var obox = document.getElementById("first")
+
+    // 变量
+    // 字母 下划线 数字  $
+    // 1.不能以数字开头
+    // 2.遵循驼峰命名
+    // 3.不能使用关键字保留字
+    // 4.严格区分大小写；
+    //    var a= 10;
+    //    console.log(a);// 10
+    //    var a = 100;
+    //    console.log(a);//100
+    //    function fn() {
+    //
+    //    }
+
+    // js中的引入方式
+
+//    script
+
+    // console.log()
+    // console.dir()
+    // console.table()
+    // document.write()
+
+
+    // 1.alert()
+    // 2.confirm()
+    // 3.prompt()
+
+
+    // 1. 数据类型
+    // 基本数据类型 ： number  string  boolean  null  undefined
+    // 引用数据类型：
+    // 对象数据类型 ： 对象  数组  正则 Math  Date...
+    var num =10;
+    var obj = {};
+    var ary = [];
+    // 函数数据类型 : 函数
+
+    // 基本数据类型是操作值的，引用数据类型操作是空间地址；
+
+    // number
+    // 正数  负数 0  NaN
+    // isNaN : 判断是否是有效数字
+    // Number : 强制转换number类型的
+    // parseInt  :
+    //parseInt("13344.888px")// 13344
+    // parseFloat : 多识别一位小数点
+    // toFixed : 保留小数点位数
+
+    // string : 如果索引不存在，那么获取结果是undefined
+    var str = "ppp78[]";
+    console.log(str.length);
+    console.log(str[7]);// undefined
+    // 字符串运算: 浏览器会默认把字符串转数字类型运算
+    console.log(88 - "77px");// NaN
+    // 加法 字符串的拼接
+
+
+    // 布尔   true false
+    // true --> 1 false -->0
+    // ! : 取反  首先会把后面的值先转布尔，然后再取反
+    //有且只有这五个值0 ""  NaN undefined null转布尔是false；
+    //！[]// false  !!
+    //!!0 --> false;// Boolean
+
+    // && : 并且
+    // ||  : 或
+
+    // 数据类型比较
+
+    // = : 赋值
+    // == : 比较 会默认进行数据类型的转换再比较，结果是一个布尔值，判断两个等号两边是否相等，相等是true，不相等false；
+    // 1 == true
+    //null == undefined   true;
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

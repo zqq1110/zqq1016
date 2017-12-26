@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Date --> function;
+    // new Date() : 所有时间的实例都是对象数据类型的；
+//    console.log(new Date());
+    // new Date() Sun Dec 24 2017 12:03:06 GMT+0800 (中国标准时间)
+    // 获取当前电脑的系统时间；
+    var time= new Date();
+    // 1. getFullYear : 获取时间年
+    console.log(time.getFullYear());// 2017
+    // 2. getMonth : 获取时间月
+    console.log(time.getMonth());// [0-11]
+    // 3. getDate(): 时间日
+    console.log(time.getDate());
+   // 4. getDay() : 获取星期几
+    console.log(time.getDay());//[0-6]  星期日是0；
+    // 5.getHours: 获取当前小时数
+    console.log(time.getHours());
+    // 6.getMinutes() : 获取分钟数
+    console.log(time.getMinutes());
+    // 7.getSeconds() : 获取秒
+    console.log(time.getSeconds());
+    //8.getMilliseconds : 获取毫秒 ； 一秒等于1000毫秒
+    console.log(time.getMilliseconds());
+
+    // 9.getTime() : 获取当前时间距离1970-1-1时间的毫秒差；
+    console.log(time.getTime());
+
+    console.log(new Date("2017/12/25 12:00:00")-new Date());// 两个时间的毫秒差；
+</script>
+</body>
+</html>

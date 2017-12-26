@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [88,66,15,66,77,9,66,15];
+    // 数组的去重： 把数组中重复项删除
+    // 1.indexOf
+//    var newAry = [];
+//    for(var i=0;i<ary.length;i++){
+//        var  cur = ary[i];
+//        // 判断当前项在数组中是否出现过；
+//        if(newAry.indexOf(cur)===-1){
+//            newAry.push(cur)
+//        }
+//    };
+//    console.log(newAry);
+    // 2.在原有数组上实现去重
+    //var obj = {10:20,10:30};// 对象的属性名不能重复
+    var obj ={};
+    for(var i=0;i<ary.length;i++){
+        var cur = ary[i];
+        if(obj[cur] === cur){// true  说明当前项是重复项；
+//            ary.splice(i,1);// 数组塌陷；会导致数组这一项之后的所有项的索引进行重新计算；这样做是非常消耗性能；
+            ary[i] = ary[ary.length-1];// 把数组的最后一项替换数组当前的重复项
+            ary.length--;// 删除数组的最后一项
+            i--;// 既然发生替换，对当前项重新进行检测，所以要进行i--;
+            continue;// 如果是重复，直接结束本轮循环；
+        }
+        obj[cur] = cur;
+    }
+    console.log(ary);
+
+
+</script>
+</body>
+</html>

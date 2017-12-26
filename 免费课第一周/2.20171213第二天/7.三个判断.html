@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1.if(){}else if(){}else{}
+    // js 操作语句，条件语句；
+    //    console.log(2)
+    //    if(1===1){
+    //        // 当括号中的结果是true，此处代码执行；
+    //        console.log(1)
+    //        if(![]==false){
+    //            console.log("你很好")
+    //        }else{
+    //            if(NaN){
+    //            }
+    //        }
+    //    }else if(2=="2"){
+    //
+    //        console.log(100)
+    //    }else if(NaN==NaN){
+    //        // 只要上面的条件都不成立，此处代码才可以执行
+    //    }
+    //    if(true){
+    //
+    //    }
+    //    if([]==[]){
+    //
+    //    }
+    //    if(0){
+    // 如果只有一个值，那么会默认转布尔；如果是true，代码执行，否则，不执行；
+    //        console.log(100)
+    //    }
+
+    //    if(typeof 1==="number" || []==true){
+    //        console.log(0)
+    //    }
+    //    if(1==="1"){
+    //
+    //    }else if([]==""){
+    //
+    //    }
+    //    if("3px"+3){
+    //        console.log(0)
+    //    }
+
+    //    var  num = null || undefined;
+    // || 赋值： 首先会判断第一个值转布尔是true还是false，如果是true，直接变量取第一个值；如果第一个是false，不管第二个值转布尔是true还是false，都取第二值；
+    //    console.log(num);//
+    //    if(null || 10){
+    //        console.log(100)
+    //    }
+
+
+    // 2. 三元运算符: 一般处理简单的if else;
+    // 问号前面的是条件。条件为真，执行问号后面的代码，条件为假，执行冒号后面的代码
+    //    if(1==="1"){
+    //       console.log(1)
+    //    }else{
+    //        console.log(2)
+    //    }
+    //1 === "1" ? console.log(1) : console.log(2);
+
+    // 3.witch case   绝对比较
+    // 每一个条件的末尾加上break（中止，中断）
+    var num =10;
+    switch (num){
+        // 10 === "10"
+            // 小括号中的值和case后面的值就行绝对比较
+        case "10":
+            console.log(1);
+            break;
+        case 10:
+            console.log(2);
+            break;
+        default :
+//             当上面的情况都返回false，执行此处的代码；相当于if else中的else语句
+            console.log(100)
+
+    }
+    var obj = {name:"adb"};
+    // 对象的属性名是字符串格式的
+    console.log(obj["name"]);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    // 1. charAt： 通过索引获取字符
+//    console.log(str[20]);
+//    console.log(str.charAt(20));
+    // 2.charCodeAt : 通过索引获取当前字符的Unicode编码值
+   // console.log(str.charCodeAt(0));
+    //48~57:0-9    65~90 A-Z    97~122:a-z
+
+    // 3.substr(n,m):  从索引n开始，截取m个字符；
+//    console.log(str.substr(2, 3));
+    // 4.substring(n,m) : 从索引n开始,截取到索引m，不包含m;
+//    console.log(str.substring(3));
+//    console.log(str.slice(3, 9));
+//    console.log(str.slice(3, -1));
+    // 5.slice(n,m) : 和substring一样；支持负数作为索引进行截取的；
+
+    // 6.toUpperCase :把小写转大写；
+//    console.log(str.toUpperCase());
+    // 7.toLowerCase : 大写转小写
+//    console.log(str.toLowerCase());
+
+    // 8.indexOf : 检测当前字符在字符串第一次出现的索引位置； 检测当前字符在字符串是否存在，如果不存在，返回-1；
+
+    var str = " helloworld ";
+//    console.log(str.indexOf("w"));
+// 9. lastIndexOf : 检测当前字符最后一次出现的索引位置;检测当前字符在字符串是否存在，如果不存在，返回-1；
+//    console.log(str.lastIndexOf("l"));// 8
+    // 10.split: 把按照特定字符分隔数组中的每一项；
+//    console.log(str.split(""));
+    // 11.replace:替换字符串，每次只能替换一个；原有字符串不变；
+//    console.log(str.replace("l", "a").replace("l", "a"));
+//    console.log(str);
+
+    // 12. trim /trimLeft /trimRight: 去除首尾空格
+// trimLeft : 去除开头空格
+    // trimRight : 去除末尾空格；
+    console.log(str.trim());
+
+</script>
+</body>
+</html>
