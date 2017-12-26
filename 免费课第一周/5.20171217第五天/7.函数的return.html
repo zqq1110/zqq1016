@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // return ： 函数中的出口
+    // return 后面的内容是函数的返回值；
+    // 函数体中，遇到return，会结束整个函数；下面的代码都不再运行了；
+    // 如果函数没有return，那么函数默认返回值undefined；
+    function sum() {
+        console.log(arguments);
+        var total = 0;
+        var c = 10;
+        for(var i=0;i<arguments.length;i++){
+            var cur  = Number(arguments[i]);
+            if(!isNaN(cur)){
+                total += cur;
+            }
+        };
+
+        //return total;// 是把total存储的值return出去，total并没有return出去
+        //console.log(122)
+        // return 10;// 无效的
+        //
+    }
+    // 求任意数的和
+    var a = sum(1,2,3,"99px",NaN,undefined,66,"78");
+    console.log(a);
+
+
+</script>
+</body>
+</html>

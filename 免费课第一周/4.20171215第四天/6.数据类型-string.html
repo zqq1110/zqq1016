@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // string
+    // 字符串： 用单引号或双引号包起来的整个内容就是字符串
+    var str = "12345ni";
+
+    // length属性: 代表当前字符串字符总个数
+//    console.log(str.length);
+
+    // 索引 ： 在字符串中，每一个字符都有一个与之的对应的索引；索引从0开始，依次递增1；
+    //console.log(str[5]);// "n"
+
+    // 字符串的运算
+    // + - * /
+   // 首先会转换成number，然后进行运算；
+//    console.log("15" - "3");// 12
+//    console.log("15px" - "3");// NaN
+//    console.log(15 - "3");// 12
+
+    //乘法
+
+//    console.log("15" * "3")
+
+    // 除法
+//    console.log("12" / 9);
+//    console.log("12px" / 9);
+    // 任意数字和NaN进行运算，都是NaN；
+
+//    console.log(12 + null);// 12
+//    console.log(12 + undefined);// NaN
+
+
+    // 字符串加法 : 字符串的拼接
+
+    console.log("12px" + 3);
+    console.log("12px" + NaN);
+    // 当和对象会默认先调用toString()
+    console.log("12px" + {});
+    console.log("12px" + {name:"zhufeng"});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="box" style="width:100px;height:100px;background: red"></div>
+<script>
+    //console.log(this);//
+    var  oDiv = document.getElementById("box");
+//    oDiv.onclick = function () {
+//        console.log(typeof this);
+//    }();
+//    var  obj = {name : "aa",};
+//    obj.abbab = 17;
+
+//    var a = 10;
+    // 函数定义：
+    // 函数： 就是一个功能，或一个方法；
+
+    // 函数执行
+    function fn() {
+        console.log(1)
+    };
+//    var  a = 10.88;
+//    var b = 19.888;
+//    var c = 36.7878
+//    console.log(Number((a + b).toFixed(2))+c);
+//    var  a = 6.678;
+//    var b = 16.838;
+//    var c = 38.78;
+//    console.log(Number((a + b).toFixed(2))+c);
+    // 先求a+b,然后保留两位小数之后，再和c 求和；
+    function sum(a,b,c) {
+        console.log(Number((a + b).toFixed(2)) + c);
+    }
+    sum(1.333,2.212,3);
+    sum(1.3563,2.7812,9);
+    //把相同的功能的代码放进一个函数中，当想实现类似的功能时，直接之执行这个方法即可，减少代码冗余度；---> 函数的封装；【低耦合，高内聚】
+
+
+
+</script>
+</body>
+</html>

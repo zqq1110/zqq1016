@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 1.数组的方法
+    // 1.push  :
+    var  ary = [12,89];
+//    ary.push(100);
+//    ary[ary.length] = 100;
+//    ary.splice(ary.length,0,100);
+//    console.log(ary);
+
+    // 2. pop  : 删除数组最后一项 ； 返回值被删除的那一项
+    // 3. unshift  shift   slice(n,m)  splice(n,0,m)  sort(function(a,b){return a-b;})    reverse   join  concat   indexOf   lastIndexOf  forEach  map
+
+//    for(var i=0;i<ary.length;i++){
+//        console.log(ary[i]);
+//    }
+//
+//    ary.forEach(function (item,index) {
+//        console.log(item)
+//    })
+
+    // 去重案例
+    var ary = [12,77,89,90,94,89,90];
+    var ary1 = [12,77,12,12,100,89,90];
+    var newAry = [];
+    //1. indexOf
+    // 2. 对象的属性名不可以重复
+//    var obj = {12:100,12:1000};
+//    console.log(obj);
+    function unique(ary) {
+        var obj = {};
+        for(var i=0;i<ary.length;i++){
+            var cur = ary[i];
+            if(obj[cur] === cur){
+                ary[i] = ary[ary.length-1];
+                ary.length--;
+                i--;
+                continue;
+            }
+            obj[cur] = cur;
+        };
+        return ary;
+    };
+    unique(ary);
+    console.log(unique(ary1));
+
+
+</script>
+</body>
+</html>

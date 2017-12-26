@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // null  : 空对象指针
+    // undefined ： 未定义
+
+//    var obj = {name:"niha"};
+//    obj = null;
+//    var  num;
+
+    // {}
+//    var obj = {name:""};
+//    obj.name = "world";
+//    console.log(obj.age);// undefined
+//    delete obj.name;
+
+
+    // 数组 ：
+//    var  ary = [12,"hhh",0,100]
+//    console.log(ary.length);
+
+
+    // 操作语句
+    // isNaN检测有效数字，是有效数字返回false，不是返回true
+    if(typeof NaN==="number"){
+        console.log(1)
+        if(!isNaN([])){
+            console.log(3);
+        }
+    }else if(true==1){
+        console.log(2);
+    }else{
+
+    }
+    // 三元运算符
+
+    //typeof NaN==="number"?console.log(1):console.log(2)
+    // switch case
+
+    // for 循环
+    var ary = [12,88,99,0];
+    var a = 0;
+    for(var i=0;i<ary.length;i++){
+//   ary[i]
+        // 当i=0时，ary[0] --> 12
+        // 当i=1时， ary[1] -->88
+            //...
+        a+=ary[i];
+    };
+    console.log(a);
+
+</script>
+</body>
+</html>

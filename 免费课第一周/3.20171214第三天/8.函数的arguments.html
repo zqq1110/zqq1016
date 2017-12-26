@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+//    function sum(a,b,c) {
+//        // 函数中的arguments；
+//        // arguments 是一个类数组；不是一个真正的数组；
+//        // arguments 是函数天生自带的参数集合；只跟实参有关，跟形参没有任何关系；
+//        console.log(arguments.length)// 8
+//        console.log(arguments)// [12, 78, 99, 100, 101, 77, 66, 99, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+//        var total = 0;
+//        for(var i=0;i<arguments.length;i++){
+//            total+=arguments[i];
+//        };
+//        console.log(total);
+//
+//
+//    }
+//    sum(12,78,99,100,101,77,66,99)
+//    sum(12,78,69,130,10,77,66,99)
+
+    // 任意数求和
+    function sum() {
+        // 1.初始化total=0；
+        // 2.for 循环传进来的实参
+             //1）先进行转化成数字
+             //2) 判断是否是有效数字
+        var total = 0;
+        for(var i=0;i<arguments.length;i++){
+            var cur = Number(arguments[i]);
+            if(!isNaN(cur)){
+                // 能进来的是有效数字；
+                total += cur;
+            }
+        };
+        console.log(total);
+    };
+    sum(12,88,"99","12px",[],99,200,undefined)
+
+
+
+
+</script>
+</body>
+</html>

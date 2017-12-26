@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [12, 78]
+    // 1. toUpperCase : 小写转大写
+    //    var str = "howareyou";
+    //    console.log(str.toUpperCase());
+    // 2. toLowerCase : 大写转小写
+    //    var str = "YOUAREBEATIFUL";
+    //    console.log(str.toLowerCase());
+    var str = "YOUAREBEATIFUL";
+    // 3. charAt(索引) : 通过索引去获取字符串中的字符，和str[索引]， 当索引不存在时，charAt 获取时空字符串，[]是undefined；
+    //    console.log(str.charAt(30));
+
+    // 4. charCodeAt; 通过索引获取当前这个字符的Unicode编码值；
+    //    console.log(str.charCodeAt(4));
+    // 5. substr(n,m) : 从字符串索引n开始，截取m个字符；
+    //    console.log(str.substr(3, 6));
+
+    // 6.substring(n,m): 从索引n开始，截取到索引m，不包含m;区别在于不支持负数作为索引去截取；
+
+    // 7.slice : 索引n开始，截取到索引m，不包含m;支持负数作为索引进行截取
+    //    console.log(str.substring(3,-1));
+    //    console.log(str.slice(3, -1));
+
+    // 8.indexOf  :  检测字符在字符串中第一次出现的索引位置;如果字符不存在，那么返回-1；
+    //    var str = "youarebeautiful";
+    //    console.log(str.indexOf("a"));// 3
+    //    console.log(str.indexOf("w"));//-1
+    // 9. lastIndexOf : 检测字符在字符串中最后一次出现的索引位置；如果字符不存在，那么返回-1；
+    //    console.log(str.lastIndexOf("u"));// 13
+    // 10.split : 把字符串按照特定的字符分隔成数组中的每一项；返回一个数组，和数组中join方法对应；
+    //    var time = "2017-12-21 15:22:30";
+    //    console.log(time.split(":"))//["2017-12-21 15", "22", "30"]
+    //    console.log(time.split(" "))//["2017-12-21", "15:22:30"]
+    //    console.log(time.split("%"));//["2017-12-21 15:22:30"]
+    // 12.replace:替换字符串  str.replace(old,new); 每次只能替换一个。如果要替换多个，在使用正则的情况下，必须执行多次；   原有字符串不发生改变；
+    //    var  str = "zhufeng123zhufeng456";
+    //    console.log(str.replace("zhufeng", "peixun").replace("zhufeng", "peixun"));
+    //    console.log(str);
+
+    // 13. trim : 去除收尾空格   trimLeft  : 去除首位空格   trimRight : 去除字符串末尾空格；
+    var str = "  leftright";
+    // String.prototype : 字符串这个类的原型；
+
+</script>
+</body>
+</html>

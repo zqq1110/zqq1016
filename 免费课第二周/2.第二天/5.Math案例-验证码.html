@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #code{
+            width:160px;
+            height:50px;
+            text-align: center;
+            line-height: 50px;
+            border: 3px solid red;
+            margin:80px auto;
+            border-radius: 5px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<div id="code"></div>
+<script>
+    var  div = document.getElementById("code");
+
+//    function getCode() {
+//        var  str = "";
+//        var i=0;
+//        while(i<4){
+//            str += Math.round(Math.random()*9);
+//            i++;
+//        };
+//        div.innerHTML= str;
+//
+//    };
+
+    function getCode() {
+        var str = "0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIGKLMNOPQRSTUVWXYZ";
+        var i=0;
+        var newStr = "";
+        // 出现的验证码不许重复，大小写也不许重复；
+        while(i<4){
+            var index = Math.round(Math.random()*61);
+            newStr += str[index];
+            i++;
+        }
+        div.innerHTML= newStr;
+
+    }
+    getCode();
+    div.onclick = getCode;
+
+
+
+
+</script>
+</body>
+</html>

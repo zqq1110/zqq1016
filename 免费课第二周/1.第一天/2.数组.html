@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组法 ：
+    var  ary = [12,88,9,77,66];
+    //ary.splice(2,1)
+    ary.sort(function (a,b) {
+        return a-b;
+    })
+    ary.forEach(function (item,index) {
+
+    });
+    ary.map(function (item,index) {
+
+    });
+
+    // 数组的去重
+    // indexOf、
+    // 对象的属性名不能重复；
+    var ary = [12,66,88,5,12,66];
+//    var newAry=[];
+//    for (var i = 0; i < ary.length; i++) {
+//        var cur = ary[i];
+//        if(newAry.indexOf(cur)===-1){
+//            newAry.push(cur);
+//        }
+//    }
+//    console.log(newAry);
+    var ary = [12,66,66,88,5,12];
+    var obj = {};
+    for(var i=0;i<ary.length;i++){
+        var cur = ary[i];// 12 66
+        if(obj[cur] === cur){//
+//            ary.splice(i,1)
+            ary[i] = ary[ary.length-1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj[cur] = cur;// {12:12,66:66}
+    }
+    console.log(obj);// {}
+
+    var  obj = {age:10};
+    var cur = obj.age;
+    cur =100;
+    console.log(obj);
+
+</script>
+</body>
+</html>

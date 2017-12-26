@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul {
+            width:500px;
+            margin:20px auto;
+            list-style: none;
+        }
+        ul li{
+            width:100%;
+            height:50px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px dashed red;
+        }
+
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神1122</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+    <li>习近平考察徐州 深入学习贯彻党的十九大精神</li>
+</ul>
+<script>
+    // 1.要操作谁就要获取谁；
+    //类数组
+    var oLis = document.getElementsByTagName("li");
+    console.log(oLis.length);// 6
+    for(var i=0;i<oLis.length;i++){
+        if(i%2===0){
+            oLis[i].style.background = "green";
+        }
+        if(i%2===1){
+            oLis[i].style.background = "red";
+        }
+        // 给每一个li 保存一下当前的背景色；
+        //自定义属性
+        oLis[i].zhufengColor = oLis[i].style.background;
+        oLis[i].index = i;
+        // 给每一个li 绑定鼠标滑入
+        oLis[i].onmouseover = function () {
+            // 当鼠标滑入时，for循环已经循环完成，那么i变成8;
+            // 函数体中的this指向当前被绑定事件的元素
+            this.style.background = "yellow";
+        }
+        oLis[i].onmouseout = function () {
+            this.style.background = this.zhufengColor;
+        };
+        oLis[i].onclick = function () {
+            alert("我是第"+(this.index+1)+"个");
+        };
+    }
+    // onclick  onmouseover (鼠标滑入)  onmouseout(鼠标滑出)
+//    var  obj = {age:20};
+//    console.log(obj.age);
+
+
+//    i+1;
+
+
+
+</script>
+</body>
+</html>

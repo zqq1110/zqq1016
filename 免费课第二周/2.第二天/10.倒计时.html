@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #time{
+            width:300px;
+            height:50px;
+            text-align: center;
+            line-height:50px;
+            border:1px solid blue;
+            border-radius: 5px;
+            margin:30px auto;
+        }
+
+    </style>
+</head>
+<body>
+<div id="time"></div>
+<script>
+    // 要操作谁，获取谁
+    var box = document.getElementById("time");
+    var  targetTime = new Date("2017/12/22 12:56:00");
+
+    function addZero(value) {
+        return value<10?"0"+value:value;
+    }
+    function count() {
+        var  newTime = new Date();
+        // 计算出当前时间距离目标时间的毫秒差
+
+        var difTime = targetTime-newTime;
+        if(difTime<=0){
+            // 当时间差小于等于0，到了目标时间，清除定时器，结束整个函数；
+            clearInterval(a);
+            return;
+        };
+        // 计算当前最新的时间差中包含几个小时，几个分钟，几个秒
+        var  hour = Math.floor(difTime/(1000*60*60));
+        var min = Math.floor((difTime-hour*1000*60*60)/(1000*60));
+        var seconds = Math.floor((difTime-hour*1000*60*60-min*1000*60)/1000);
+        box.innerHTML = addZero(hour) + " : " + addZero(min) + " : " + addZero(seconds);
+    };
+    count();
+    var a = setInterval(function () {
+        count()
+    },1000);
+
+
+</script>
+</body>
+</html>

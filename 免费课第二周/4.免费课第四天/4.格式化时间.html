@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "2017-9-24 11:49:8";
+    //2017年12月24日11时49分08秒
+    var ary = str.split(" ");
+    var ary1 = ary[0].split("-");
+    var ary2 = ary[1].split(":");
+    function addZero(val) {
+        return val<10?"0" + val:val;
+    }
+    var  nexStr = ary1[0] + "年" + addZero(ary1[1]) + "月" + addZero(ary1[2]) + "日" + addZero(ary2[0]) +"时" + addZero(ary2[1]) + "分" + addZero(ary2[2]) + "秒";
+
+    console.log(nexStr);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+</head>
+<body>
+<div id="box"></div>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+
+    // 数据类型 ：
+    // 基本数据类型 ： number  string  boolean  null  undefined
+    // 和引用数据类型 ： 对象数据类型和函数数据类型
+    // 对象 {}     数组 []  正则  /\d/  Math  Date...
+
+
+    //    var  str = abcd;
+    //    var  obj = {a:{b:[]}};
+    // typeof : 返回值是个字符串，字符串中的内容是当前数据类型
+    // 1.typeof 12-->"number";
+    //typeof  null -->"object";
+    // 不能区分对象数据类型中具体的数据类型
+
+    // 2.instanceof  ： 检测实例是否属于某个类的；
+    // 3. constructor  : 检测当前实例的构造函数；
+    // 4.Object.prototype.toString.call();
+
+
+    //    var  ary = [0,1,2,3,4];
+    //    function fn(ary) {
+    //        // 空间地址一样，指向同一个堆内存；形参被实参赋值后，存储的值也是这个空间地址；
+    //        ary[0] = 100;// ary = [100,1,2,3,4]
+    //        ary = [];// 在js中遇到{} [],开辟一个新的空间地址；
+    //        ary[0] = 100;
+    //        return ary;// [100]
+    //    }
+    //    var  a = fn(ary);// ary是一个空间地址
+    //    console.log(a);//[100]
+    //    console.log(ary);//[100,1,2,3,4]
+    //
+    //
+    //    var  a = b  = {};
+    //    a.age = 10;
+    //    console.log(b);
+    //    var num =100;
+    //    function sum(num) {
+    //        num =1;
+    //    }
+    //    sum(num);
+    //    console.log(num);//100
+    //
+    //    var  c = d =100;
+    //    d = 1;
+    //    console.log(c);// 100
+
+    //    function total() {
+    //        console.log(arguments);// 函数天生自带的参数集合
+    //        // 类数组 对象数据类型的
+    //        console.log(arguments.callee);// 整个函数体；
+    //    }
+    //    console.log(total(1,2,3));
+    //     var  a = setTimeout(function () {
+    //         console.log(1);
+    //     },1000)
+    // 1.setTimeout setInterval
+    // 2. clearTimeout   clearInterval
+    //    clearTimeout(a)
+
+
+    //  第二大题
+    //1. var  a = document.getElementsByClassName("box")[0];
+    //    a.onclick = function () {
+    //
+    //    }
+    // 2.
+    var oBox = document.getElementById("box");
+
+    var a = document.createElement("div");
+    document.body.appendChild(a);
+
+    // 1. previousSibling;
+    // previousElementSibling
+
+    function getBrother(curEle) {
+        // 1.previousSibling上一个哥哥的节点；
+        // 获取当前元素的哥哥节点，判断nodeType是否等于1 ；
+        // 获取哥哥节点哥哥节点判断nodeType是否等于1；直到找到为止
+
+        if ("previousElementSibling" in curEle) {
+            // 如果条件成立；
+            return curEle.previousElementSibling;
+        }
+        var pre = curEle.previousSibling;
+        while (pre) {
+            // #text :
+            if (pre.nodeType === 1) {
+                return pre;
+            }
+            pre = pre.previousSibling;
+        }
+    }
+    //    getBrother(oBox);
+    //substr(m,n)
+    // substring(m,n)
+    // slice()
+    //    ary.sort(function (a,b) {
+    //        return a-b
+    //    })
+    //ary.slice(n-1,m)
+    // Math.round(Math.random()*(m-n)+n)
+    //    function sum() {
+    //        var total = 0;
+    //        for(var i=0;i<arguments.length;i++){
+    //            var  cur = Number(arguments[i]);
+    //            if(!isNaN(cur)){
+    //                // 校验是否是有效数字
+    //                if(cur%3===0&&cur%5===0){
+    //                    //
+    //                    total += cur;
+    //                }
+    //            }
+    //        };
+    //        return  total;
+    //    };
+    //    sum(12,15,75,"18px",90,"30")
+
+    var ary = [1, 2, 3, 1, 1, 2, 3, 4, 2, 1, 2, 3, 4, 3, 2, 1];
+    var obj = {};// {1:1,2:2,3:3}
+    for (var i = 0; i < ary.length; i++) {
+        var cur = ary[i];
+        if (obj[cur] === cur) {
+//            ary.splice(i,1)
+            ary[i] = ary[ary.length - 1];
+            ary.length--;
+            i--;
+            continue;
+        }
+        obj[cur] = cur;
+    }
+    ;
+    ary.sort(function (a, b) {
+        return b - a;
+    })
+    console.log(obj);
+    Math.round(Math.random() * (9999 - 1000) + 1000)
+
+    function getCode() {
+        var str = "";
+        var i = 0;
+        while (i < 4) {
+            str += Math.round(Math.random() * 9);
+            i++;
+        }
+        ;
+        oBox.innerHTML = str;
+    }
+    var a = setInterval(getCode, 1000);
+    setTimeout(function () {
+        clearInterval(a);
+    }, 10000);
+    //
+    var oLis = document.getElementsByTagName("li");
+    for (var i = 0; i < oLis.length; i++) {
+        if (i % 2 === 0) {
+            oLis[i].style.background = "red";
+        } else {
+            oLis[i].style.background = "green";
+        }
+        oLis[i].styleColor = oLis[i].style.background;
+        oLis[i].index = i;
+        oLis[i].onmouseover = function () {
+            this.style.background = "pink";
+        }
+        oLis[i].onmouseout = function () {
+            this.style.background = this.styleColor;
+        };
+        oLis[i].onclick = function () {
+            alert("我是第" + (this.index + 1) + "个")
+        }
+    }
+
+
+    // 1.Number  : isNaN  Number  parseInt  parseFloat  toFixed\
+    // 2.string  : 13个
+    // 3. 布尔 ： 数据类型比较的规律
+    // 4. 数组 ： 14个
+    // 5. DOM 节点及属性
+    // 6. DOM 属性方法 ：
+    // 7.动态操作DOM
+    // 8.Math
+    // 9.Date
+
+
+</script>
+</body>
+</html>

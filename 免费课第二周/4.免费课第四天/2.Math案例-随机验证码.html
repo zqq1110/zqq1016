@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #code{
+            width:200px;
+            height:50px;
+            text-align: center;
+            line-height: 50px;
+            border:1px solid blue;
+            border-radius: 5px;
+            margin:30px auto;
+        }
+    </style>
+</head>
+<body>
+<div id="code"></div>
+<script>
+    // 验证码  ： 数字  大小写字母
+    var  str = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    // [0-61]
+    var  code = document.getElementById("code");
+    function getCode() {
+        var i=0;
+        var newStr = "";
+        while(i<4){
+            var index = Math.round(Math.random()*61);
+            var  cur = str[index];
+            if(newStr.toUpperCase().indexOf(cur.toUpperCase())===-1){
+                newStr += cur;
+                //
+                i++;
+            }
+        }
+        code.innerHTML = newStr;
+    }
+    getCode();
+    code.onclick = getCode;
+
+</script>
+</body>
+</html>

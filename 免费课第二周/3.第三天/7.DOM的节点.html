@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+    <!--<div id="div1"></div>-->
+    <!--<div></div>-->
+    <!--欢迎-->
+    <ul id="ul"></ul>
+</div>
+<script>
+    var div1 = document.getElementById("div1");
+
+    var div = document.getElementsByTagName("div")[0];
+    console.log(div1);
+    console.log(div);
+    console.log(div.children);
+    var par = document.getElementById("parent");
+    var oUl = document.getElementById("ul");
+    //    console.log(par.childNodes);
+    // DOM的节点；
+    // node  : 节点
+    //           nodeType      nodeName        nodeValue
+    // 元素节点：    1           大写的标签名      null
+    // 文本节点 ：   3           #text         文本内容  （空格换行都是文本节点）
+    // 注释节点：    8           #comment      注释内容
+    // document    9            #document      null
+
+    // DOM 节点的关系属性
+    // 1. childNodes : 获取元素的所有子节点；
+    // 2. children  : 获取元素所有子元素节点
+    //    console.log(par.children);
+    // 3.parentNode : 获取当前元素的父亲节点
+
+    //console.log(div1.parentNode);
+    // 4.previousSibling : 上一个哥哥节点；
+    // previousElementSibling : 获取上一个哥哥元素节点  // 在IE8 及以下是不兼容的
+    //    console.log(oUl.previousElementSibling);
+    //   5.nextSibling  : 获取下一个弟弟节点；
+    // nextElementSibling : 获取下一个弟弟元素节点 // 在IE8 及以下是不兼容的
+    //    console.log(oUl.nextElementSibling);//
+    // 6. firstChild : 第一个子节点
+    //    console.log(par.firstChild);
+    //  firstElementChild : 获取第一个子元素节点  // 在IE8 及以下是不兼容的
+
+    // 7.lastChild  : 获取最后一个子节点
+    // lastElementChild : 获取最后一个子元素节点 // 在IE8 及以下是不兼容的
+
+
+</script>
+</body>
+</html>

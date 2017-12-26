@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var ary = [12,89,90,68,86,56,77,66];
+
+    ary = [20,19,18,17,16]
+
+    //1. 从大到小 相邻两项比较，如果前面一项比后面一项小，让这两项交换位置；当一轮比较之后，把数组的最小值放在了数组的最后面；
+    for(var j=0;j<ary.length-1;j++){
+        var flag = true;
+        for(var i=0;i<ary.length-1-j;i++){
+            if(ary[i]<ary[i+1]){
+//            var temp = ary[i];
+//            ary[i] = ary[i+1];
+//            ary[i+1] = temp;
+                var a = ary[i]+ary[i+1];
+                var b = ary[i] - ary[i+1];
+                ary[i] = (a-b)/2;
+                ary[i+1] = (a+b)/2;
+                flag = false;
+            }
+        };
+        if(flag){
+            break;
+        }
+    }
+console.log(j);
+
+console.log(ary);
+
+
+</script>
+</body>
+</html>

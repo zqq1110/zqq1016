@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<script>
+    // null  : 空对象指针 ： 代表一个没有占用内存空间地址；没有
+
+    // undefined : 未定义 ，没有；
+    // null
+    // 1. 通过id获取元素，如果没有对应的id,获取结果就是null；
+    // 2. 正则捕获，捕获不到内容，得到结果是null;
+    // 3. 清空对象；
+    var a = document.getElementById("bpx");// null;
+
+    var obj = {};
+    obj = null;
+
+    // undefined
+
+    // 1. 获取对象属性名对应的属性值，如果属性名不存在，获取结果是undefined
+    // 2. 函数如果没有return，那么函数默认的返回值是undefined
+    // 3. 有形参，实参没有赋值，那么形参默认存储值是undefined；
+    // 4. 变量如果只声明，未定义，那么默认存储值undefined；
+
+    //    var a;
+
+    //console.log(a);// a is  not  defined
+    var obj = {}
+    console.log(obj.a);// undefined
+
+
+</script>
+</body>
+</html>

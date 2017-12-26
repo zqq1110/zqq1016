@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var ary = [19, 9, 0, 67, 88, 19];
+    // 1.索引
+    //ary[1]-->9
+    //ary[8] ---> undefined
+    // 2. length;
+    //console.log(ary.length);// 6;
+
+    //    for(var i=0;i<ary.length;i++){
+    //        console.log(ary[i]);
+    //    }
+    // 新增数组最后一项；
+    // ary[ary.length] =10;
+    var ary = [19, 9, 0, 67, 88, 19];
+    // 1.push
+    //    var a = ary.push(100,200);
+    //    console.log(ary);
+    // 2.pop
+    //    var a = ary.pop();
+    //    console.log(a);
+    // 3. unshift()
+    //    var a =ary.unshift("你好")
+    //    console.log(a);
+    // 4. shift()
+    //    var  a=ary.shift()
+    //    console.log(a);
+
+    var ary = [19999, 9, 0, 67, 88, 19];
+    // 5.slice
+
+//    console.log(ary.slice(2, 2));
+//    console.log(ary.slice(3, 5));
+//    console.log(ary.slice(1, 3));
+//    console.log(ary);
+
+    // 6.splice
+//    console.log(ary.splice(2));
+//    console.log(ary.splice(2, 0,18));
+//    console.log(ary);
+    // 7.sort
+//     var  ary1 = [2,3,4,9,8,6,5]
+//    console.log(ary.sort(function (a,b) {
+//        return a-b;// 从小到大排序
+//        //return b -a; 从大到小
+//    }));
+//    console.log(ary);
+    var ary = [199, 9, 0, 67, 0, 88, 19];
+    // 8.reverse
+//    console.log(ary.reverse());
+//    console.log(ary);
+    // 9. join
+//    console.log(ary.join("$"));
+//    console.log(ary);
+    // 10concat
+//    console.log(ary.concat("100",199));
+//    console.log(ary);
+
+    // 11. indexOf
+//    console.log(ary.indexOf(0));
+//    console.log(ary.indexOf(188));
+//    console.log(ary);
+    // 12.lastIndexOf
+//    console.log(ary.lastIndexOf(0));
+
+   // 13.forEach
+    console.log(ary.forEach(function (item, index) {
+        //        console.log(item)
+//        console.log(index)
+        return 1;
+    }));
+    console.log(ary);
+    // 14.map
+    console.log(ary.map(function (item, index) {
+        //        console.log(item)
+//        console.log(index);
+        return 1;
+    }));
+    console.log(ary);
+</script>
+</body>
+</html>

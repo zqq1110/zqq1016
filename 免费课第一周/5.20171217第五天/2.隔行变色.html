@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #oUl{
+            width:500px;
+            list-style: none;
+            margin:30px auto;
+        }
+        #oUl li{
+            width:100%;
+            height:50px;
+            line-height: 50px;
+            border:1px dashed indianred;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="oUl">
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+    <li>习近平主席视察王杰生前所在连在全军引起强烈反响</li>
+</ul>
+<script>
+    // 要操作谁就要先获取谁
+    var oLis = document.getElementsByTagName("li");
+    console.log(oLis);
+
+    for(var i=0;i<oLis.length;i++){
+        if(i%3===0){
+            oLis[i].style.background = "lightBlue"
+        }else if(i%3===1){
+            oLis[i].style.background = "lightGreen"
+        }else{
+            oLis[i].style.background = "lightPink"
+        }
+        // 自定义属性；
+        // 每一轮循环，把当前li的背景色还有对应的索引，存储到当前li的自定义属性上；
+        oLis[i].zhufengColor = oLis[i].style.background;
+        oLis[i].index = i;
+        oLis[i].onmouseover = function () {
+          // this--> 关键字； this 指向当前被绑定的事件对应的那个元素；
+            this.style.background = "red";
+
+        };
+
+        oLis[i].onmouseout = function () {
+            this.style.background = this.zhufengColor;
+        }
+        oLis[i].onclick = function () {
+            alert(this.index+1);
+        }
+    }
+    // onmouseover : 鼠标滑入
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    function fn() {
+//        console.log(1)
+//    }
+//
+//    fn()
+    // 定时器 setTimeout  setInterval
+    // console.log(window.setTimeout);// 函数
+   // setTimeout : 当代码加载到这一行，浏览器会默认记录一个时间，等过了一定时间，执行一次函数；
+//     定时器的返回值： 是在当前这个页面中第几个定时器，返回值就是几；
+    var a = setTimeout(function () {
+        console.log(2)
+    },2000)
+    console.log(a);
+    var b = setTimeout(function () {
+        console.log(2)
+    },2000)
+    // 2. setInterval : 当浏览器加载这一行，记录一个时间，以后每隔一段时间，就会执行此函数；
+   // 定时器的返回值： 是在当前这个页面中第几个定时器，返回值就是几；
+     var  c = setInterval(function () {
+         console.log(2);
+     },10);
+     console.log(c);
+    // 清除定时器 : 把定时器对应的返回值传进这个clearTimeout函数中9；
+
+    clearTimeout(a)
+    clearInterval(c)
+
+    //  最小识别时间： 谷歌5-6毫秒  火狐 7-8 毫秒   iE : 13-15毫秒
+
+</script>
+</body>
+</html>

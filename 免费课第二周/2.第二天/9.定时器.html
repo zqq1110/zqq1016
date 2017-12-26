@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // js中的定时器
+    //    function fn() {
+    //        console.log(1)
+    //    }
+    //    fn()
+    // 当代码加载到这一行，浏览器会默认记录一个时间，等一秒之后，让这个函数执行；
+    console.log(setTimeout);//ƒ setTimeout() { [native code] }
+    function fn() {
+        console.log(1)
+    }
+    // js单线程的；
+    var a = setTimeout(fn, 5)// 1000 毫秒
+    for (var i = 0; i < 100000000; i++) {
+
+    }
+    //    console.log(a);//1
+    // setInterval: 每隔1000毫秒执行一次函数；
+    //    var b = setInterval(function () {
+    //        console.log(2);
+    //    }, 100);
+    //    console.log(b);// 2
+    //    var c = setInterval(function () {
+    ////        console.log(2);
+    //    }, 100);
+    //    console.log(c);
+    //每个浏览器识别的最小时间不一样，谷歌最小识别5到6毫秒；
+    // 火狐识别时间7-8毫秒
+    // iE 识别的最小时间13-15毫秒；
+
+    // 定时器的返回值是代表当前定时器在这个页面中出现的第几个定时器；
+
+    // 清除定时器  clearTimeout()  把当前定时器的返回值传进去，清除对应的定时器；
+
+    clearTimeout(a);
+    clearInterval(b);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #tab{
+            width :400px;
+            height:300px;
+            margin:20px auto;
+        }
+        #tab ul{
+           list-style: none;
+            overflow: hidden;
+        }
+        #tab ul li{
+            width :60px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            border: 1px solid lightpink;
+            float:left;
+            margin-right:10px;
+        }
+        #tab ul li.select{
+            background: lightpink;
+        }
+        #tab div{
+            display: none;
+            width:400px;
+            height:300px;
+            text-align: center;
+            line-height: 300px;
+            border: 1px solid lightpink;
+        }
+        #tab div.select{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="tab">
+    <ul>
+        <li class="select">电影</li>
+        <li>综艺</li>
+        <li>动漫</li>
+    </ul>
+    <div class="select">功守道</div>
+    <div>非你莫属</div>
+    <div>奥特曼</div>
+</div>
+<script>
+    // 1. 要操作谁，就要先获取谁；
+    var oLis = document.getElementsByTagName("li");
+    var outer = document.getElementById("tab");
+    var oDivs = outer.getElementsByTagName("div");
+    // 选项卡原理： 当点击li时，让其他所有的li的class清空，让点击的这个li新增class;让对应的div新增class;
+    for(var i=0;i<oLis.length;i++){
+        // oLis[0].onclick = function(){}
+        // oLis[1].onclick = function(){}
+        //oLis[2].onclick = function(){}
+
+        // 自定义属性存储当前li的索引；
+        oLis[i].index = i;
+        oLis[i].onclick = function () {
+            // 清空所有li以及div上的class
+            for(var j = 0;j<oLis.length;j++){
+                // oLis[0].className = "";
+                oLis[j].className = "";
+                oDivs[j].className = "";
+            };
+            // 点击让这个li新增class;
+            // this---> 指向当前点击的这个li;
+            //
+            this.className = "select";
+            oDivs[this.index].className = "select";
+        }
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

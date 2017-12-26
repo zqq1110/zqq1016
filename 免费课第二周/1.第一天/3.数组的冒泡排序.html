@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var  a = [12,13,16,18,19,25]
+    var ary = [12,66,8,55,9,90,99,68];
+    // 1. sort
+//    ary.sort(function (a,b) {
+//        return a-b;// 从小到大
+//    })
+//    console.log(ary);
+
+    // 冒泡排序原理： 让数组相邻两项进行两两比较，如果前面一项大于后面一项，让这项交换位置；循环一轮之后，把最大值放在数组的最后面，执行类似这样的循环多次，实现排序；
+    for(var j=0;j<ary.length;j++){
+        var flag = true;
+        // j =0
+        // 外面循环一次，那么最大值放到数组最后面，那么下一次没必要再去比较
+        for(var i=0;i<ary.length-1-j;i++){
+//            console.log(1);
+            // 此处的索引可以取到ary.length-1;
+            // i+1 最大值等于ary.length-1;所以循环的i最大ary.length-2
+            if(ary[i]>ary[i+1]){
+                // 当数组的前一项大于数组的后一项，让其两个位置实现交换；
+                // 存在前面一项大于后面一项这种情况，说明数组顺序没有排好；
+                var temp = ary[i];
+                ary[i] = ary[i+1];
+                ary[i+1] = temp;
+                flag = false;
+            };
+        };
+        if(flag){
+            break;
+        }
+    };
+    console.log(ary);
+
+
+</script>
+</body>
+</html>

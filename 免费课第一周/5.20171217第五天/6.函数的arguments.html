@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //arguments : 在函数体中，arguments是天生自带的参数集合；只和实参有关系；
+    // arguments : 是一个类数组，是对象数据类型的；
+    function sum() {
+        console.log(arguments);
+        var total = 0;
+        for(var i=0;i<arguments.length;i++){
+            var cur  = Number(arguments[i]);
+            if(!isNaN(cur)){
+                total += cur;
+            }
+        }
+
+    }
+    // 求任意数的和
+    sum(1,2,3,"99px",NaN,undefined,66,"78");
+
+
+</script>
+
+</body>
+</html>

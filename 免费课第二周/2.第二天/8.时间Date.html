@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // new Date() : 本机的系统时间；
+    var time = new Date();
+    // console.log(time);//Thu Dec 21 2017 16:20:09 GMT+0800 (中国标准时间)
+    //console.log(typeof new Date());// "object";
+    console.log(time.getFullYear());// 2017 获取整年
+    console.log(time.getMonth());// 11   获取月 [0-11]
+    console.log(time.getDate()); // 21  获取时间日 [1-31]
+    console.log(time.getDay());// 4   获取星期   [0-6] 星期日是0；
+    console.log(time.getHours());// 16   获取时间小时数
+    console.log(time.getMinutes());// 25  获取分钟数
+    console.log(time.getSeconds());// 37秒  获取时间秒
+    console.log(time.getMilliseconds());  // 获取毫秒
+
+    console.log(time.getTime());// 获取当前时间距离1970-1-1时间的毫秒差
+
+
+
+</script>
+</body>
+</html>

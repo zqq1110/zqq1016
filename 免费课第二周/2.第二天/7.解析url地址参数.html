@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // url : 一般情况下，URL的问号后面跟着参数；
+    function queryUrl(url) {
+        var index = url.indexOf("?");
+        var newUrl = url.substring(index+1);
+       //
+        var ary = newUrl.split("&");
+        console.log(ary);//["cl=3", "tn=baidutop10", "fr=top1000", "wd=工人嘴啃无骨鸡爪AA", "rsv_idx=2"]
+        var obj = {};
+        for(var i=0;i<ary.length;i++){
+            var  newary = ary[i].split("=");
+            // 新增属性名和属性值；
+            console.log(newary);//
+            obj[newary[0]] = newary[1];
+        }
+        return obj;
+    }
+    var  a = queryUrl("https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=工人嘴啃无骨鸡爪AA&rsv_idx=2");
+    console.log(a);
+    //{cl:3,tn:baidutop10,fr:top1000,wd:工人嘴啃无骨鸡爪,rsv_idx:2}
+
+
+</script>
+</body>
+</html>

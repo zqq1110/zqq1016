@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 函数的定义
+//    function fn1() {
+//
+//    }
+//    var i =0;
+//    function fn() {
+//        // 递归： 在函数体内部调用函数自己本身，让其执行；
+//        // 递归时需要有停止条件的；
+//        console.log(1);
+//        i++;
+//        if(i>80){
+//            return;
+//        }
+//        fn()/// Maximum call stack size exceeded : 递归没有停止条件
+//    }
+//    // 函数的执行；
+//    fn()
+
+    // 1.求出1-100之间不能被3整除的数的和
+    var total = 0;
+    for(var i=1;i<101;i++){
+        if(i%3!==0){
+            total +=i;
+        }
+//        i%3!==0?total +=i:null;
+    };
+    console.log(total);
+
+    function sum(num) {
+        if(num===0){
+            return num;
+        }
+        if(num%3===0){
+            return sum(num-1);
+        }
+        return num + sum(num-1);
+        // 当num=100 时  100 + sum(99);
+        // 当 num =99     100 + sum(98);
+        // 当num=98     100 +  98 + sum(97);
+        // 当num =97   100 +98 + 97 + sum(96);
+        // ....
+        // 当num =1    100 + 98 + 97 +... + 1 + sum(0);
+        // 当num =0   100 + 98 + 97 +... + 1 + 0；
+
+    };
+    console.log(sum(100));
+
+
+</script>
+</body>
+</html>
